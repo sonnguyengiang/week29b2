@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="text" id="nhap">
+    <button onclick="a()">tinh so ngay</button>
+    <h1 id="ra"></h1>
+</form>
+<script>
+
+    function a() {
+        let gan = +document.getElementById('nhap').value;
+        let songay = '';
+        switch (gan) {
+            case 2:
+                songay = '28 or 29 days';
+                break;
+            case 4:
+            case 5:
+            case 6:
+            case 9:
+            case 11:
+                songay = '30 days';
+                break;
+            case 1:
+            case 3:
+            case 7:
+            case 8:
+            case 12:
+                songay = '31 days';
+                break;
+            default:
+                songay = 'khong hop le';
+        }
+        document.getElementById('ra').innerHTML = songay;
+    }
+</script>
+</body>
+</html>
